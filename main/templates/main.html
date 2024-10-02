@@ -112,8 +112,8 @@
     else {
         classNameString = "columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 w-full"
         moodEntries.forEach((item) => {
-          const mood = DOMPurify.sanitize(mood);
-          const feelings = DOMPurify.sanitize(feelings);
+          const mood = DOMPurify.sanitize(items.fields.mood);
+          const feelings = DOMPurify.sanitize(items.fields.feelings);
             htmlString += `
             <div class="relative break-inside-avoid">
                 <div class="absolute top-2 z-10 left-1/2 -translate-x-1/2 flex items-center -space-x-2">
@@ -121,7 +121,7 @@
                     <div class="w-[3rem] h-8 bg-gray-200 rounded-md opacity-80 -rotate-90"></div>
                 </div>
                 <div class="relative top-5 bg-indigo-100 shadow-md rounded-lg mb-6 break-inside-avoid flex flex-col border-2 border-indigo-300 transform rotate-1 hover:rotate-0 transition-transform duration-300">
-                    <div class="bg-indigo-200 text-gray-800 p-4 rounded-t-lg border-b-2 border-indigo-300">
+                    <div class="bg-indigo-200 text-gray-800 p-4 rounded-t-lg border-b-2 border-indigo-300">5
                         <h3 class="font-bold text-xl mb-2">${mood}</h3>
                         <p class="text-gray-600">${item.fields.time}</p>
                     </div>
